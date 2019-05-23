@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: mini-app
-        image: registry.cn-beijing.aliyuncs.com/mini-app/devops:${IMAGE_TAG}
+        image: registry.cn-beijing.aliyuncs.com/mini-app/miniapp:${IMAGE_TAG}
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
