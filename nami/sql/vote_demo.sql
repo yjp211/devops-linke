@@ -1,26 +1,3 @@
-# 微信小程序DEMO - 投票
-
----
-
-本项目目的仅用于微信小程序开发培训，并非真实需求。<br/>
-项目分为两块：<br/>
- - 前端开发，采用微信小程序规范的wxml、wxss、javascript语言开发，源码在**app目录**；
- - 后端开发采用[CoNami框架](https://gitee.com/yingpo/CoNami)，数据库DDL和逻辑源码在**nami目录**；
-    - 使用docker构建: docker build -t myvote .
-
-## 效果图
-![](http://i.imgur.com/blLC2Ln.png)
-<br/>
-![](http://i.imgur.com/KCwnYkA.png)
-<br/>
-![](http://i.imgur.com/ZgPqjnZ.png)
-
-## 数据库模型
-实例共用了三张表，console截图：<br/>
-![](http://i.imgur.com/doTCpJy.png)
-
-建表语句：<br/>
-```sql
 /* *****************************************************************************
 表名	DEMO_VOTE
 表展示名	DEMO_投票主题
@@ -95,16 +72,5 @@ insert into `DEMO_VOTE_DETAIL` (VOTE_ID,CONTENT,SORT) select max(ID),'订阅号'
 insert into `DEMO_VOTE_DETAIL` (VOTE_ID,CONTENT,SORT) select max(ID),'服务号',1 from `DEMO_VOTE`;
 insert into `DEMO_VOTE_DETAIL` (VOTE_ID,CONTENT,SORT) select max(ID),'企业号',2 from `DEMO_VOTE`;
 insert into `DEMO_VOTE_DETAIL` (VOTE_ID,CONTENT,SORT) select max(ID),'小程序',3 from `DEMO_VOTE`;
-```
-## 更多关于CoNami
-
-- 容器化的Nami，gitee地址：https://gitee.com/yingpo/CoNami
-- 端到端小程序技术栈搭建文档：
-
-## 更多关于NAMI
-
-- GITHUB地址： [https://github.com/wodenwang/nami](https://github.com/wodenwang/nami)
-- NAMI介绍： [http://riversoft.com.cn/nami.html](http://riversoft.com.cn/nami.html)
-- 本DEMO视频： [NAMI来了！五分钟让微信小程序接上数据库（含视频）](http://mp.weixin.qq.com/s?__biz=MzI2MDE0MjA5MQ==&mid=2247483854&idx=1&sn=5c80bf25dbbbc7637c758929bf5d237d&chksm=ea6f64aadd18edbc6bf84be857711886f072d01c5bd07804befeb77e82e7283569187c1fb178#rd)
 
 
