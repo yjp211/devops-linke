@@ -9,7 +9,7 @@ RUN { echo '#!/bin/sh'; echo 'set -e'; echo; echo 'dirname "$(dirname "$(readlin
 ENV JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
 ENV JAVA_VERSION=8u111
 ENV JAVA_DEBIAN_VERSION=8u40~b09-1
-ENV CA_CERTIFICATES_JAVA_VERSION=20140324
+ENV CA_CERTIFICATES_JAVA_VERSION=20190405
 RUN set -x && apt-get update && apt-get install -y openjdk-8-jdk="$JAVA_DEBIAN_VERSION" ca-certificates-java="$CA_CERTIFICATES_JAVA_VERSION" && rm -rf /var/lib/apt/lists/* && [ "$JAVA_HOME" = "$(docker-java-home)" ]
 RUN /var/lib/dpkg/info/ca-certificates-java.postinst configure
 RUN /bin/bash
