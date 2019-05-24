@@ -1,5 +1,5 @@
-FROM java2:latest
-MAINTAINER yingpo2018@163.com
-COPY ./ /nami/
+FROM registry.cn-hangzhou.aliyuncs.com/conami/conami
+COPY ./nami/request/ /nami/request/
+COPY ./conf/ /nami/conf/
 WORKDIR /nami
 CMD ["/bin/bash", "/nami/service.sh", "start"]
