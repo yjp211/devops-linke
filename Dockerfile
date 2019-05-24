@@ -1,3 +1,4 @@
-COPY devops-demo.tgz /home/admin/container-app.tgz
+FROM scratch
+ADD devops-demo.tgz /
 WORKDIR /nami
 CMD ["/bin/bash", "/nami/service.sh", "start"]
