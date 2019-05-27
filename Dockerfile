@@ -3,5 +3,6 @@ COPY nami-pack-linux64.zip /
 RUN mkdir -m 777 nami && unzip nami-pack-linux64.zip -d nami
 COPY ./myconami/ /nami/
 COPY ./myvote/nami/request/ /nami/request/
+COPY ./myconami/README.html /nami/
 ENTRYPOINT ["/bin/bash", "/nami/service.sh", "start"]
 WORKDIR /nami
