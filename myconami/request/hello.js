@@ -1,6 +1,6 @@
 //definde
 function main() {
-	var a = request.getString("a") || 'mya20190527';
+	var a = request.getString("a") || 'none';
 	var b = request.getInteger("b") || 0;
 
 	return {
