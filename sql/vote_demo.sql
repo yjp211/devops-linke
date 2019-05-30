@@ -7,7 +7,7 @@
 非主键	CREATE_TIME	创建时间	日期时间	是	0,0	
 ****************************************************************************** */
 CREATE TABLE `DEMO_VOTE` (
-  `ID` int(11) NOT NULL auto_increment,
+  `ID` int(16) NOT NULL auto_increment,
   `TITLE` text,
   `CREATE_TIME` timestamp NOT NULL default CURRENT_TIMESTAMP,
   PRIMARY KEY  (`ID`)
@@ -24,10 +24,10 @@ CREATE TABLE `DEMO_VOTE` (
 非主键	CREATE_TIME	创建时间	日期时间	是	0,0	
 ****************************************************************************** */
 CREATE TABLE `DEMO_VOTE_DETAIL` (
-  `ID` int(11) NOT NULL auto_increment,
-  `VOTE_ID` int(11) not null,
+  `ID` int(16) NOT NULL auto_increment,
+  `VOTE_ID` int(16) not null,
   `CONTENT` text ,
-  `SORT` int(11) not null default 0,
+  `SORT` int(16) not null default 0,
   `CREATE_TIME` timestamp NOT NULL default CURRENT_TIMESTAMP,
   PRIMARY KEY  (`ID`)
 );
@@ -43,9 +43,9 @@ CREATE TABLE `DEMO_VOTE_DETAIL` (
 非主键	CREATE_TIME	投票时间	日期时间	是	0,0	
 ****************************************************************************** */
 CREATE TABLE `DEMO_VOTE_RESULT` (
-  `ID` int(11) NOT NULL auto_increment,
-  `VOTE_ID` int(11) not null,
-  `DETAIL_ID` int(11) not null,
+  `ID` int(16) NOT NULL auto_increment,
+  `VOTE_ID` int(16) not null,
+  `DETAIL_ID` int(16) not null,
   `OPEN_ID` varchar(100) not null,
   `CREATE_TIME` timestamp NOT NULL default CURRENT_TIMESTAMP,
   PRIMARY KEY  (`ID`)
