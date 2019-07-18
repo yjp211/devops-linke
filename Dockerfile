@@ -1,5 +1,5 @@
 FROM registry.cn-beijing.aliyuncs.com/mini-app/miniapp:namibase
-COPY nami-pack-linux64.zip /
+COPY package/target/nami-pack-linux64.zip /
 RUN mkdir -m 777 nami && unzip nami-pack-linux64.zip -d nami && rm -f ./nami-pack-linux64.zip
 COPY ./myconami/ /nami/
 COPY ./myvote/nami/request/ /nami/request/
