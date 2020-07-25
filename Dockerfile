@@ -1,4 +1,4 @@
-FROM registry.cn-shenzhen.aliyuncs.com/linke_devops/devops_registry:namibase
+FROM registry.cn-shenzhen.aliyuncs.com/linke_devops/linke_github_devops:namibase
 COPY package/target/nami-pack-linux64.zip /
 RUN mkdir -m 777 nami && unzip nami-pack-linux64.zip -d nami && rm -f ./nami-pack-linux64.zip
 COPY ./myconami/ /nami/
